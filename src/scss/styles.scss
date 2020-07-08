@@ -1,0 +1,857 @@
+//variables
+$main-color: #2657ef;
+$secondary-color: white;
+$accent-color: #f96103;
+$hover-color: rgb(180, 179, 179);
+$alt-color: #5270ff;
+
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+//////////////////////
+//SMALL PHONE STYLING
+//////////////////////
+
+@media screen and (max-width: 700px){
+
+    // Nav Bar
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        width: 100%;
+        background-color: $secondary-color;
+        padding-top: .7%;
+        padding-bottom: .7%;
+    
+        &__img {
+            margin-left: 7%;
+            img{
+                height: 7vh;
+                margin-top: 2%;;
+                margin-bottom: 2%;
+            }
+        }
+    
+        &__links {
+            align-self: center;
+            display: flex;
+            width: 45%;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-right: 3%;
+            span {
+                color: black;
+                font-family: 'Lato', sans-serif;
+                font-weight: 700;
+                padding-bottom: 3px;
+            }
+        }
+    }
+
+    //Nav bar styling for login and signup links
+    #signup-text{
+        color: $secondary-color;
+        border-radius: 3px;
+        padding: 2vh;
+        background-color: $accent-color
+    
+    }
+
+    #login-text{
+        color: $main-color;
+    }
+
+    #signup-text:hover{
+        opacity: .7;
+
+    }
+
+    #login-text:hover{
+        color: $alt-color;
+    }
+
+    //app homepage
+    .App {
+        height: 100%;
+        width: 100vw;
+        background-color: $secondary-color;
+    
+        &__header{
+            background-image: url('/scribe-banner-3.png');
+            background-size: cover;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            padding: 0 3%;
+            &__image {
+                height: 48%;
+                margin-bottom: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    height: 90%;
+                    width: 100%;
+                }
+            }
+            &__text{
+                height: 52%;
+                color: white;
+                font-family: 'Raleway', sans-serif;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                h1 {
+                    font-weight: 800;   
+                    font-size: 3em;    
+                    margin-top: 0; 
+                    margin-bottom: 2%;
+                        
+                }
+                h4 {
+                    font-weight: 400;
+                    font-size: 1em;
+                    margin-top: 0;
+                    margin-bottom: 10%;
+                
+                }
+                a {
+                    width: 100%;
+                    background-color: $accent-color;
+                    text-align: center;
+                    color: $secondary-color;
+                    font-size: 1.4em;
+                    font-family: 'Raleway', sans-serif;
+                    border-radius: 3px;
+                    padding: 2% 0;
+                    text-decoration: none;
+                    margin-bottom: 10%;
+                }
+        
+                a:hover {
+                    opacity: .9;
+                    cursor: pointer;
+                }
+                a:active {
+                    background-color: rgb(83, 82, 82);
+                }
+            }
+        }
+
+        &__main-content {
+            display: flex;
+            flex-direction: column;
+            &__infographics{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &__icon{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: whitesmoke;
+                    img{
+                        margin-top: 5%;
+                        width: 10%;
+                    }
+                    h1{
+                        margin-top: 8%;
+                        margin-bottom: 8%;
+                        font-size: 2em;
+                        text-align: center;
+                    }
+                }
+
+                &__1{
+                    width: 95%;
+                    margin-top: 5%;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    justify-content: center;
+                    align-items: center;
+                    &__text{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        h1{
+                            color: $main-color;
+                            font-size: 2.2em;
+                            font-weight: 700;
+                            margin-bottom: 1%;
+                        }
+                        h4{
+                            font-size: 1.5em;
+                            font-weight: 500;
+                        }
+                        a{
+                            color: $accent-color;
+                            font-weight: 500;
+                            font-size: 1.1em;
+                            text-decoration: none; 
+                            width: 100%;
+                        }
+                        a:hover {
+                            text-decoration: underline;
+                        }
+                        
+                    }
+                    &__image{
+                        margin-top: 20%;
+                        img{
+                            width: 100%;
+                        }
+                        
+                    }
+
+                }
+
+                &__2{
+                    width: 95%;
+                    margin-top: 5%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    &__text{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        h1{
+                            color: $main-color;
+                            font-size: 2.2em;
+                            font-weight: 700;
+                            margin-bottom: 1%;
+                        }
+                        h4{
+                            font-size: 1.5em;
+                            font-weight: 500;
+                        }
+                        a{
+                            color: $accent-color;
+                            font-weight: 500;
+                            font-size: 1.1em;
+                            text-decoration: none; 
+                            width: 100%;
+                        }
+                        a:hover {
+                            text-decoration: underline;
+                        }
+                        
+                    }
+                    &__image{
+                        margin-top: 20%;
+                        img{
+                            width: 100%;
+                        }
+                        
+                    }
+
+                }
+            }
+        }
+        &__top-footer {
+            background-color: #2657ef;
+            width: 100%;
+            padding: 10% 15%;
+            margin-top: 10%;   
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            h1 {
+                font-weight: 800;   
+                font-size: 2.5rem;    
+                margin-top: 0; 
+                margin-bottom: 10%;  
+                text-align: center;       
+            }
+            h4 {
+                font-weight: 400;
+                font-size: 1rem;
+                margin-top: 0;
+                margin-bottom: 20%;
+                text-align: center;
+                
+            }
+            a {
+                width: 90%;
+                background-color: $accent-color;
+                text-align: center;
+                color: $secondary-color;
+                font-size: 1.4em;
+                font-family: 'Raleway', sans-serif;
+                border-radius: 3px;
+                padding: 2% 0;
+                text-decoration: none;
+            }
+    
+            a:hover {
+                opacity: .9;
+                cursor: pointer;
+            }
+            a:active {
+                background-color: rgb(83, 82, 82);
+            }
+        }
+    }
+
+}
+
+
+
+//////////////////////
+//WEB STYLING
+//////////////////////
+
+@media screen and (min-width: 701px) {
+//Styling for the Nav bar component
+.nav {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    width: 100%;
+    background-color: $secondary-color;
+    padding-top: .7%;
+    padding-bottom: .7%;
+
+    &__img {
+        margin-left: 7%;
+        img{
+            height: 7vh;
+            margin-top: 2%;;
+            margin-bottom: 2%;
+        }
+    }
+
+    &__links {
+        align-self: center;
+        display: flex;
+        width: 25vw;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-right: 3%;
+        height: 100%;
+        span {
+            color: black;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            padding-bottom: 3px;
+        }
+    }
+
+    
+}
+
+//Nav bar styling for login and signup links
+#signup-text{
+    color: $secondary-color;
+    border-radius: 3px;
+    padding: 2vh;
+    background-color: $accent-color
+
+}
+
+#login-text{
+    color: $main-color;
+}
+
+#signup-text:hover{
+    opacity: .7;
+
+}
+
+#login-text:hover{
+    color: $alt-color;
+}
+
+
+
+//Styling for homepage
+
+.App {
+    height: 100%;
+    background-color: $secondary-color;
+
+    &__header{
+        width: 100%;
+        background-image: url('/scribe-banner-3.png');
+        background-size: cover;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 3%;
+        &__image {
+            width: 45%;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        &__text{
+            width: 40%;
+            height: 80%;
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-bottom: 5%;
+            margin-top: 5%;
+            h1 {
+                font-weight: 800;   
+                font-size: 4rem;    
+                margin-top: 0; 
+                margin-bottom: 2%;
+                    
+            }
+            h4 {
+                font-weight: 400;
+                font-size: 1.5rem;
+                margin-top: 0;
+                margin-bottom: 10%;
+            
+            }
+            a {
+                width: 350px;
+                background-color: $accent-color;
+                text-align: center;
+                color: $secondary-color;
+                font-size: 1.4em;
+                font-family: 'Raleway', sans-serif;
+                border-radius: 3px;
+                padding: 2% 0;
+                text-decoration: none;
+            }
+    
+            a:hover {
+                opacity: .9;
+                cursor: pointer;
+            }
+            a:active {
+                background-color: rgb(83, 82, 82);
+            }
+        }
+    }
+    &__main-content {
+            display: flex;
+            flex-direction: column;
+            &__infographics{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &__icon{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: whitesmoke;
+                    img{
+                        margin-top: 5%;
+                        width: 10%;
+                    }
+                    h1{
+                        margin-top: 8%;
+                        margin-bottom: 8%;
+                        font-size: 3em;
+                        text-align: center;
+                    }
+                }
+
+                &__1{
+                    width: 85%;
+                    margin-top: 5%;
+                    display: flex;
+                    justify-content: space-between;
+                    &__text{
+                        width: 40%;
+                        h1{
+                            color: $main-color;
+                            font-size: 2.2em;
+                            font-weight: 700;
+                        }
+                        h4{
+                            font-size: 1.5em;
+                            font-weight: 500;
+                        }
+                        a{
+                            color: $accent-color;
+                            font-weight: 500;
+                            font-size: 1.1em;
+                            text-decoration: none; 
+                        }
+                        a:hover {
+                            text-decoration: underline;
+                        }
+                        
+                    }
+                    &__image{
+                        width: 40%;
+                        img{
+                            width: 100%;
+                        }
+                        
+                    }
+
+                }
+
+                &__2{
+                    margin-top: 10%;
+                    width: 85%;
+                    display: flex;
+                    justify-content: space-between;
+                    &__text{
+                        width: 40%;
+                        h1{
+                            color: $main-color;
+                            font-size: 2.2em;
+                            font-weight: 700;
+                        }
+                        h4{
+                            font-size: 1.5em;
+                            font-weight: 500;
+                        }
+                        a{
+                            color: $accent-color;
+                            font-weight: 500;
+                            font-size: 1.1em;
+                            text-decoration: none; 
+                        }
+                        a:hover {
+                            text-decoration: underline;
+                        }
+                        
+                    }
+                    &__image{
+                        width: 40%;
+                        img {
+                            width: 100%;
+                        }
+                        
+                    }
+                }
+            }
+    }
+
+    &__top-footer {
+        background-color: #2657ef;
+        width: 100%;
+        padding: 10% 15%;
+        margin-top: 10%;   
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        h1 {
+            font-weight: 800;   
+            font-size: 4rem;    
+            margin-top: 0; 
+            margin-bottom: 2%;  
+            text-align: center;       
+        }
+        h4 {
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 5%;
+            text-align: center;
+            
+        }
+        
+        a {
+            width: 60%;
+            background-color: $accent-color;
+            text-align: center;
+            color: $secondary-color;
+            font-size: 1.4em;
+            font-family: 'Raleway', sans-serif;
+            border-radius: 3px;
+            padding: 2% 0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            opacity: .9;
+            cursor: pointer;
+        }
+        a:active {
+            background-color: rgb(83, 82, 82);
+        }
+    }
+}
+
+}
+
+//Web Styling for user dashboard
+.Dashboard {
+    height: 90vh;
+    background-color: #fbfdff;
+    &__main-content {
+        display: flex;
+        &__sidebar {
+            background-color: $secondary-color;
+            height: 100vh;
+            color: black;
+            overflow: auto;
+            display: flex;
+            &__content {
+                width:20vw;
+                min-width: 300px; 
+                position: fixed;
+                left: 50px;
+                border-right: 1px solid #d8d8d8;
+                z-index: 10000;
+                height: 100%;
+                background-color: $secondary-color;
+                &__addnote {
+                    border-bottom: 1px solid #d8d8d8;
+                    padding: 5% 5%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                &__addnote:hover {
+                    background-color: rgb(220, 255, 220);
+                    border-right: 3px solid green;
+                }
+
+                &__item {
+                    border-bottom: 1px solid #d8d8d8;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 5% 5%;
+                    width: 100%;
+                }
+                &__item:hover {
+                    border-right: 3px solid $main-color;
+                    background-color: #f0f1ff;
+                }
+                
+            }
+            &__slider {
+                display: flex;
+                justify-content: center;
+                background-color: $main-color;
+                align-items: center;
+                width: 50px;
+                padding-top: 20%;
+                &__icon {
+                    height: 100%;
+                    margin-top: 50%;
+                    align-self: flex-end;
+                }
+                &__icon:hover {
+                    color: $main-color;
+                    cursor: pointer;
+                }
+            }
+        }
+        &__note-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__logo {
+                margin-top: 2%;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                color: $main-color;
+                img {
+                    height: 40px;
+                }
+            }
+            &__note {
+                background-color: white;
+                padding: 2% 2%;
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 4%;
+                height: 100%;
+                -moz-box-shadow: 0 0 6px #ccc;
+                -webkit-box-shadow: 0 0 6px #ccc;
+                box-shadow: 0 0 6px #ccc;
+                border-radius: 3px;
+                width: 50vw;
+            }
+        }
+            
+    }
+}
+
+#title {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 100%;
+    height: 4vh;
+    min-height: 20px;
+    border: none;
+    border-bottom: 1px solid #d8d8d8;
+
+}
+
+#title:focus {
+    outline: none;
+
+}
+
+#notes {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+li {
+    list-style: none;
+}
+
+.tooltip {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1000000000;
+}
+
+.item-title {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2em;
+}
+.item-add {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+#logout {
+    color: $alt-color;
+    font-weight: 400;
+    margin-right: 1vw;
+}
+
+.pi-list {
+    font-size: 1.6em;
+    color: white;
+}
+.pi-list:hover {
+    font-size: 1.6em;
+    color: rgb(209, 209, 252);
+    cursor: pointer;
+}
+
+.pi-list:active {
+    color: $accent-color;
+}
+
+.pi-trash{
+    margin-left: 5px;
+    color: $main-color;
+}
+.pi-pencil{
+    color: $main-color;
+}
+
+.pi-pencil:hover{
+    font-size: 1.1em;
+    color: $accent-color;
+    cursor: pointer;
+   
+}
+
+.pi-trash:hover {
+    font-size: 1.1em;
+    color: $accent-color;
+    cursor: pointer;
+    
+}
+
+.pi-pencil:active{
+    color: rgb(161, 107, 7);
+   
+}
+
+.pi-trash:active {
+    color: rgb(161, 107, 7);
+    
+}
+.pi-plus-circle {
+    color: #5271ff;
+    font-size: 1.8em;
+    margin: 0;
+    padding: 0;
+}
+
+.pi-plus-circle:hover {
+    color: green;
+    font-size: 1.9em;
+    cursor: pointer;
+}
+
+.pi-plus-circle:active {
+    color: rgb(2, 80, 2);
+}
+
+button[type=submit] {
+    background-color: $accent-color;
+    border: none;
+    border-radius: 3px;
+    padding: 1%;
+    color: white;
+    font-weight: 500;
+}
+
+button[type=submit]:hover {
+    opacity: .7;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    button[type=submit] {
+        background-color: $accent-color;
+        border: none;
+        border-radius: 3px;
+        padding: 1%;
+        color: white;
+        font-weight: 500;
+        width: 100%;
+    }
+
+    .Dashboard__main-content__note-container__logo {
+        margin-top: 5%;
+    }
+    .Dashboard__main-content__note-container__note {
+        width: 80vw;
+        margin-top: 3%;
+    }
+    .Dashboard__main-content__sidebar__content {
+        min-width: 250px;
+        width: 15vw;
+    }
+
+
+}
+
